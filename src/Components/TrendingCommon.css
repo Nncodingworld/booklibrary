@@ -1,0 +1,81 @@
+
+
+.trending-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.trending-title {
+  margin: 0;
+  font-size:30px;
+    font-family: "Tenor Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+ color:rgb(66, 57, 14);
+
+}
+
+.trending-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.trending-card:hover {
+  transform: scale(1.02);
+}
+
+.trending-card img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.trending-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.trending-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.trending-card .card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trendingbutton {
+ border: 1px solid #a6808cff; ;
+  border-radius: 4px;
+  background-color: #a6808cff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  padding: 2px 8px;
+
+}
+
+.addcart {
+  border: 1px solid rgb(71, 173, 166);
+  border-radius: 4px;
+  background-color: #1d918d;
+  color: #fff;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.addcart:hover {
+  background-color: #157c78;
+}

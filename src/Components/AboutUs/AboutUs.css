@@ -1,0 +1,310 @@
+
+
+
+.about-section-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Center the overlay with flexbox */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(201, 197, 197, 0.5); 
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  padding: 20px;
+}
+.highlight {
+color:rgb(159, 106, 123);
+  font-weight: bold;
+   font-family: "Berkshire Swash", serif;
+   font-size: 24px;
+}
+
+.about-text {
+  color: rgb(0, 0, 0);
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border-left: 3px solid #ffffff;
+ font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+}
+.about-text h2{
+    color:rgb(66, 57, 14);
+   font-family: "Old Standard TT", serif;     
+ font-weight: 800;
+font-size: 30px;
+}
+/* Animation from left */
+.animated-slide {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-text {
+    border-left: none;
+    border-top: 5px solid white;
+    text-align: center;
+  }
+}
+.authors-section{
+  background-color: #fcfafa;
+}
+.authors-text {
+  max-width: 800px;     
+  margin: 0 auto 2rem;  
+  padding: 0 15px;       
+  text-align: center;    
+  color: #333;           
+   font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.02em; 
+
+}
+.authors-section h2{
+       color:rgb(66, 57, 14);
+     font-family: "Old Standard TT", serif;   
+ font-weight: 800;
+font-size: 30px;
+padding: 20px 0px 10px 0px;
+background-size: cover;
+background-position: center;
+}
+.authors-section, .testimonials-section, .contact-form-section {
+  padding: 40px 20px;
+  text-align: center;
+   box-sizing: border-box;
+  overflow: hidden;
+}
+ 
+.author-card{
+    background: rgb(255, 253, 253); /* more opaque */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 30px;
+}
+    
+
+.author-card, .testimonial {
+  padding: 20px;
+}
+.author-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Limit card width & center it inside each slide */
+.testimonial-card {
+  width: 80%;                          
+  margin: 0 auto;                      
+  background: #fff;
+  border-radius: 40px 8px 40px 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(62, 62, 62, 0.1);
+  height: 100%;
+  box-sizing: border-box;
+}
+.testimonials-section {
+  padding: 60px 20px;
+  background-color: #fffefe;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.testimonials-section h2{
+       color:rgb(66, 57, 14);
+  font-family: "Old Standard TT", serif;   
+ font-weight: 800;
+font-size: 30px;
+padding: 20px 0px 10px 0px;
+background-size: cover;
+background-position: center;
+}
+.testpara {
+  max-width: 800px;     
+  margin: 0 auto 2rem;  
+  padding: 0 15px;       
+  text-align: center;    
+  color: #333;           
+   font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.02em;  
+}
+
+
+
+.testimonial-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(159, 106, 123);
+}
+
+.testimonial-comment {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+    font-family: "Old Standard TT", serif;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: rgb(159, 106, 123);
+  font-family: "Dancing Script", cursive;
+}
+
+.slick-slide {
+  padding: 0 10px;                  
+}
+
+
+.slick-track {
+  display: flex !important;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 90%;
+  }
+}
+
+.contact-form-section {
+  position: relative;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  z-index: 1;
+  overflow: hidden; /* Ensures background stays contained */
+}
+
+.contact-form-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(164, 158, 158, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../../assets/banner4.png') no-repeat center center / cover;
+  z-index: -1;
+}
+.form-container h2{
+ font-family: "Old Standard TT", serif;   
+font-size: 35px;
+ } 
+
+/* Glass effect form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.1); /* transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  min-width: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+/* Optional: input fields white and text dark */
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #333;
+}
+
+/* --- Form Fields --- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+ padding: 8px 10px;
+margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #66ccff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(102, 204, 255, 0.5);
+}
+
+/* --- Button --- */
+.contact-form button {
+  background-color: rgba(80, 78, 79, 0.507);
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  width: 60%;
+}
+
+.contact-form button:hover {
+  background-color: rgb(155, 100, 119);;
+  transform: translateY(-2px);
+}
