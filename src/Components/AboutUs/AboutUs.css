@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 550px;
   overflow: hidden;
 }
 
@@ -19,6 +19,7 @@
   justify-content: center; /* center horizontally */
   align-items: center;     /* center vertically */
   padding: 20px;
+  margin-top: 50px;
 }
 .highlight {
 color:rgb(159, 106, 123);

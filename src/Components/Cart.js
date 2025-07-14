@@ -13,7 +13,7 @@ function Cart() {
 
   return (
     <>
-      <div className="container mt-4">
+      <div className="container "  style={{ marginTop: '120px', minHeight: '100vh' }}>
         <h3>Your Cart</h3>
         {cart.length === 0 ? (
           <p>Your cart is empty.</p>

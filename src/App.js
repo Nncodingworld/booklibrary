@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Bootstrap & Icons
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,6 +18,10 @@ import Routing from './Components/Routing';
 import { CartProvider } from './Components/CartContext';
 
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <CartProvider>
       <div className='App'>

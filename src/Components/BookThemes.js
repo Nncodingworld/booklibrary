@@ -6,7 +6,7 @@ const BookThemes = () => {
   return (
     <div className="container-fluid book-themes-section py-5">
       <div className="row g-4">
-<div className="col-12 col-md-6">
+<div className="col-12 col-md-6 " 	data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
           <div className="theme-card"   style={{ backgroundImage: `url(${studyImage})` }}>
             <div className="overlay">
                  <NavLink to="/books" style={{ textDecoration: 'none', color: 'white', display: 'inline-block' }}>
@@ -16,8 +16,8 @@ const BookThemes = () => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-md-6">
-          <div className="theme-card" style={{ backgroundImage: `url('${MotivationImage}')` }}>
+        <div className="col-12 col-md-6" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+          <div className="theme-card" style={{ backgroundImage: `url(${MotivationImage})` }}>
             <div className="overlay">
              <NavLink
   to="/books"

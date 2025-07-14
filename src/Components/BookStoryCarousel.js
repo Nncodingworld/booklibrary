@@ -27,7 +27,7 @@ const slides = [
 
 const BookStoryCarousel = () => {
   return (
-    <div className="container-fluid story py-5">
+    <div className="container-fluid story py-5"  data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"   data-aos-easing="ease-in-out">
       <h3>  Stories That Inspire Growth</h3>
       <p className='storypara'> Explore timeless lessons through captivating books that spark transformation.Whether it's discovering purpose, <br/>building habits, or stepping into the unknown,  each story invites you to reflect, grow, and take action toward a better you.</p>
     

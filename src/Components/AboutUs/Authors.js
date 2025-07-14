@@ -26,7 +26,7 @@ const Authors = () => {
   };
 
   return (
-    <section className="authors-section">
+    <section className="authors-section" data-aos="fade-up" data-aos-duration="900" data-aos-delay="50"   data-aos-easing="ease-in-out">
       <h2>Featured Authors</h2>
       <p className='authors-text'>Our featured authors bring stories to life with passion, imagination, and deep insight.
 From bestselling novelists to emerging voices, each one offers a unique perspective.

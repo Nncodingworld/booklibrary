@@ -67,10 +67,10 @@ const blogData = [
 const BlogPage = () => {
   return (
    <>
-    <Container className=" blog-page py-5">
+    <Container className=" blog-page py-5 mt-5" >
       <h2 className="text-center mb-4">Latest Blog Posts</h2>
       <p className=" blogpara text-center mb-4">Reading blogs open the door to countless new books and ideas waiting to be discovered. They connect you with passionate readers, honest reviews, and curated recommendations. Whether you're seeking motivation, knowledge, or pure escape, a good blog can lead you to your next favorite read.</p>
-      <Row className="g-4">
+      <Row className="g-4" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"   data-aos-easing="ease-in-out" >
         {blogData.map((blog) => (
           <Col key={blog.id} xs={12} sm={6} lg={3}>
             <Card className="h-100 blog-card">

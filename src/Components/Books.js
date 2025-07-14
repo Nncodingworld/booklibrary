@@ -22,17 +22,16 @@ const Books = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('http://localhost:5000/books')
+    fetch(`${process.env.PUBLIC_URL}/database.json`)
       .then((res) => res.json())
       .then((data) => {
-        setBooks(data);
+        setBooks(data.books);
 
-        // If state contains a category from navigation
         if (state?.category) {
           setActiveCategory(state.category);
-          setFilteredBooks(data.filter((book) => book.category === state.category));
+          setFilteredBooks(data.books.filter((book) => book.category === state.category));
         } else {
-          setFilteredBooks(data);
+          setFilteredBooks(data.books);
         }
       })
       .catch((err) => console.error('Failed to fetch books:', err));
@@ -61,12 +60,12 @@ const Books = () => {
 
   return (
     <>
-      <div className="container my-4">
+      <div className="container my-4" >
         <h2 className="text-center mb-4" style={{ fontFamily: 'Old Standard TT', color: 'rgb(66, 57, 14)' }}>
           Book Store
         </h2>
 
-        <div className="category-section">
+        <div className="category-section" >
           <div className="categorysec" role="group" aria-label="Book categories">
             {categories.map((cat) => (
               <button

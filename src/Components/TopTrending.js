@@ -3,11 +3,34 @@ import { useNavigate } from 'react-router-dom';
 import { useCart } from '../Components/CartContext';
 import './TrendingCommon.css';
 
-const TopTrending = ({ books }) => {
+const TopTrending = () => {
   const navigate = useNavigate();
   const { addToCart } = useCart(); 
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4;
+
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/database.json`)
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then(data => {
+        if (data.books && Array.isArray(data.books)) {
+          setBooks(data.books);
+        } else {
+          console.error('No books array found in JSON');
+          setBooks([]);
+        }
+      })
+      .catch(err => {
+        console.error('Fetch error:', err);
+        setBooks([]);
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
   const topTrendingBooks = [...books]
     .sort((a, b) => b.rating - a.rating)
@@ -29,10 +52,14 @@ const TopTrending = ({ books }) => {
     addToCart(book);
   };
 
+  if (loading) return <p>Loading...</p>;
+
+  if (books.length === 0) return <p>No books available.</p>;
+
   return (
     <section className="container  trending-section my-5">
       <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap">
-        <h2 className=" trending-title mb-0">Kids Specials</h2>
+        <h2 className="trending-title mb-0">Kids Specials</h2>
         <div>
           <button className="trendingbutton me-2" onClick={handlePrev} disabled={currentIndex === 0}>
             &#8592; 
@@ -42,12 +69,12 @@ const TopTrending = ({ books }) => {
             onClick={handleNext}
             disabled={currentIndex + itemsPerPage >= topTrendingBooks.length}
           >
-         &#8594;
+            &#8594;
           </button>
         </div>
       </div>
 
-      <div className="row g-4">
+      <div className="row g-4"  data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"   data-aos-easing="ease-in-out">
         {visibleBooks.map((book) => (
           <div key={book.id} className="col-12 col-sm-6 col-md-3">
             <div
@@ -67,11 +94,11 @@ const TopTrending = ({ books }) => {
                 <div className="mt-auto d-flex justify-content-between align-items-center">
                   <span className="fw-bold">⭐ {book.rating}</span>
                   <button
-  className="addcart"
-  onClick={(e) => handleAddToCart(book, e)}
->
-  Add to Cart
-</button>
+                    className="addcart"
+                    onClick={(e) => handleAddToCart(book, e)}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>

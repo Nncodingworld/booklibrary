@@ -12,7 +12,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-form-section">
+    <section className="contact-form-section"  data-aos="fade-up" data-aos-duration="900" data-aos-delay="50"   data-aos-easing="ease-in-out">
       <div className="form-container">
         <h2>Contact Us</h2>
         <form className="contact-form" onSubmit={handleSubmit}>

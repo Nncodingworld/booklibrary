@@ -55,7 +55,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="testimonials-section">
+    <section className="testimonials-section"  data-aos="fade-up" data-aos-duration="900" data-aos-delay="50"   data-aos-easing="ease-in-out">
       <h2>Our Happy Souls</h2>
       <p className="testpara">
         Our readers love sharing their experiences with us.

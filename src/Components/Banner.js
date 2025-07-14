@@ -10,10 +10,10 @@ const Banner = () => {
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={bannerimg1} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
+      <div className="carousel-caption d-none d-md-block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
         <h1>Mystery & Thriller</h1>
        <p></p>
-          <NavLink to="/books" className="bannerbtn">
+          <NavLink to="/books" className="bannerbtn" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
       ShopNow
              </NavLink>
             

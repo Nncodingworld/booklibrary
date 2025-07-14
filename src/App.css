@@ -12,9 +12,10 @@
  .navbar{
   background-color: white;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
-  position: sticky;
   top: 0;
   z-index: 1020; 
+  position: fixed!important;
+  width: 100%;
  }
 .navbar .navbar-brand{
   font-size: 30px;
@@ -76,15 +77,15 @@ form .form-control{
   border-color: rgb(159, 106, 123); 
   box-shadow: 0 0 6px rgba(118, 75, 89, 0.4)!important;
 }
-/* bannerSection */
+
 .carousel-inner {
-  max-height: 500px;
+height: 550px;
   overflow: hidden;
 }
 
 .carousel-inner img {
   object-fit: cover;
-  height: 500px;
+  height: 550px;
   width: 100%;
 }
 .carousel-item{
@@ -296,14 +297,14 @@ padding-bottom: 10px;
 /* Dark overlay */
 .theme-card .overlay {
   position: absolute;
-  top: 0;
+ 
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* darkens the image */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   align-items: center;
-  justify-content: center;
+
 }
 
 /* Title text */
@@ -427,7 +428,7 @@ address{
 }
 .form{
 width: 100%;
-height: 500px;
+height:100vh;
 display: flex;
 justify-content: center;
 align-items: center;
